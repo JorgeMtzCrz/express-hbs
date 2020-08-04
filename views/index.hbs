@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My first view</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>{{name}}</h1>
+  <p>{{{course}}}</p>
+  {{#if lastname}}
+    <p>{{lastname}}</p>
+  {{else}}
+    <p>no hay name</p>
+  {{/if}}
+  {{#unless address}}
+    <p>inverso al if</p>
+  {{/unless}}
+  <ul>
+    {{#each cities}}
+      <li class='list-item'>{{this}}</li>
+    {{else}}
+      <p>No cities yet</p>
+    {{/each}}
+  </ul>
+  
+  {{#with address}}
+    <p>street: {{street}}</p>
+    <p>number: {{number}}</p>
+    
+  {{/with}}
+  
+  <img src="https://media.giphy.com/media/l0MYEqEzwMWFCg8rm/giphy.gif">
+</body>
+</html>
